@@ -5,16 +5,16 @@ using namespace std;
 
 int main() {
     int age;
-    int total = 0;
+    float total = 0.0;
     int cnt = 0;
 
     while(1){
         cin >> age;
         if(age > 29) break;
 
-        total += age;
+        total += (float)age;
         cnt++;
     }
-    printf("%.2f", (float)total / cnt);
+    printf("%.2f", total / cnt);
     return 0;
 }
