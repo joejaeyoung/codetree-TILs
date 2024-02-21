@@ -10,6 +10,7 @@ int main() {
     cout << n * n;
     if(n < 5)
     {
+        cout << endl;
         cout << "tiny";
     }
     return 0;
