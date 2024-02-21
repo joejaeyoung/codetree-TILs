@@ -10,6 +10,8 @@ int main() {
     {
         while(b--)
             cout << a;
+    }else{
+        cout << "0";
     }
     return 0;
 }
