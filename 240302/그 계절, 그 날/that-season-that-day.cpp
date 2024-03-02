@@ -5,9 +5,9 @@ using namespace std;
 int get_day[12];
 
 int is_special_year(int y){
-    if(y % 4 == 0 && y % 100 && y % 400)
+    if(y % 4 == 0 && y % 100 == 0 && y % 400 == 0)
         return 1;
-    if(y % 4 == 0 && y % 100)
+    if(y % 4 == 0 && y % 100 == 0)
         return 0;
     if(y % 4 == 0)
         return 1;
