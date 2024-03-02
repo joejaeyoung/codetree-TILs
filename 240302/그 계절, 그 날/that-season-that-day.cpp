@@ -39,6 +39,8 @@ void deter_season(int y, int m, int d){
             cout << "Winter";
             return ;
         }
+        cout << -1;
+        return ;
     }
     if(get_day[m] < d){
         cout << -1;
