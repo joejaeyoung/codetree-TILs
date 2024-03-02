@@ -63,11 +63,12 @@ void deter_season(int y, int m, int d){
         return ;
     }
 
-    if(m == 12 || m <= 2){
+    if(m == 12 || m == 1){
 
         cout << "Winter";
         return ;
     }
+    cout << -1;
 }
 
 int main() {
