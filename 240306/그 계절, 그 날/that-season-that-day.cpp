@@ -59,12 +59,12 @@ int main() {
     if(m >= 6 && m <= 8){
          if(m == 7 || m == 8){
             if(d <= 31){
-                cout << "Winter";
+                cout << "Summer";
                 return 0;
             }
         }else if(m == 6){
             if(d <= 30){
-                cout << "Winter";
+                cout << "Summer";
                 return 0;
             }else{
                 cout << -1;
