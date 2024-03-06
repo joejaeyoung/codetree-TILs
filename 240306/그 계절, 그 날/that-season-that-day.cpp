@@ -29,7 +29,7 @@ int main() {
             cout << "Winter";
             return 0;
         }else{
-            cout << -1;
+            cout << "-1";
             return 0;
         }
         return 0;
@@ -46,11 +46,11 @@ int main() {
                 cout << "Spring";
                 return 0;
             }else{
-                cout << -1;
+                cout << "-1";
                 return 0;
             }
         }else{
-            cout << -1;
+            cout << "-1";
             return 0;
         }
         return 0;
@@ -67,11 +67,11 @@ int main() {
                 cout << "Summer";
                 return 0;
             }else{
-                cout << -1;
+                cout << "-1";
                 return 0;
             }
         }else{
-            cout << -1;
+            cout << "-1";
             return 0;
         }
         return 0;
@@ -79,34 +79,23 @@ int main() {
 
     if(m >= 9 && m <= 11){
         if(m == 10){
-            if(d <= 31){
-                cout << "Fall";
-                return 0;
-            }
+            cout << "Fall" << endl;
+            return 0;
         }else if(m == 9 || m == 11){
             if(d <= 30){
                 cout << "Fall";
                 return 0;
-            }else{
-                cout << -1;
-                return 0;
             }
+            cout << "-1";
         }else{
-            cout << -1;
+            cout << "-1";
             return 0;
         }
         return 0;
     }
 
     if(m == 12 || m == 1){
-        if(d <= 31){
-            cout << "Winter";
-            return 0;
-        }else{
-            cout << -1;
-            return 0;
-        }
-        return 0;
+        cout << "Winter" << endl;
     }
 
     return 0;
