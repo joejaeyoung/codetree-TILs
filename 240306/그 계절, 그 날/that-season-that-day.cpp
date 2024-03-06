@@ -37,11 +37,9 @@ int main() {
 
     if(m >= 3 && m <= 5){
         if(m == 3 || m == 5){
-            if(d <= 31){
-                cout << "Spring";
-                return 0;
-            }
-        }else if(m == 4){
+            cout << "Spring";
+            return 0;
+        }else{
             if(d <= 30){
                 cout << "Spring";
                 return 0;
@@ -49,20 +47,15 @@ int main() {
                 cout << "-1";
                 return 0;
             }
-        }else{
-            cout << "-1";
-            return 0;
         }
         return 0;
     }
 
     if(m >= 6 && m <= 8){
          if(m == 7 || m == 8){
-            if(d <= 31){
                 cout << "Summer";
                 return 0;
-            }
-        }else if(m == 6){
+        }else{
             if(d <= 30){
                 cout << "Summer";
                 return 0;
@@ -70,9 +63,6 @@ int main() {
                 cout << "-1";
                 return 0;
             }
-        }else{
-            cout << "-1";
-            return 0;
         }
         return 0;
     }
@@ -81,15 +71,13 @@ int main() {
         if(m == 10){
             cout << "Fall" << endl;
             return 0;
-        }else if(m == 9 || m == 11){
+        }else{
             if(d <= 30){
                 cout << "Fall";
                 return 0;
+            }else{
+                cout << "-1";
             }
-            cout << "-1";
-        }else{
-            cout << "-1";
-            return 0;
         }
         return 0;
     }
