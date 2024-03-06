@@ -13,72 +13,46 @@ int main() {
     int y, m, d;
     cin >> y >> m >> d;
 
-    if(m == 2){
+    if(m == 1){
+        cout << "Winter" << endl;
+    }else if(m == 2){
         if(isSpecialYear(y)){
-            if(d >= 29){
-                cout << "Winter";
-                return 0;
+            if(d <= 29){
+                cout << "Winter" << endl;
             }
-        }else if(d <= 28){
-            cout << "Winter";
-            return 0;
+        }else{
+            if(d <= 28){
+                cout << "Winter" << endl;
+            }else{
+                cout << "-1";
+            }
+        }
+    }else if(m == 3 || m == 5){
+        cout << "Spring" << endl;
+    }else if(m == 4){
+        if(d <= 30){
+            cout << "Spring" << endl;
         }else{
             cout << "-1";
-            return 0;
         }
-        return 0;
-    }
-
-    if(m >= 3 && m <= 5){
-        if(m == 3 || m == 5){
-            cout << "Spring";
-            return 0;
+    }else if(m == 7 || m == 8){
+        cout << "Summer" << endl;
+    }else if(m == 6){
+        if(d <= 30){
+            cout << "Summer" << endl;
         }else{
-            if(d <= 30){
-                cout << "Spring";
-                return 0;
-            }else{
-                cout << "-1";
-                return 0;
-            }
+            cout << "-1";
         }
-        return 0;
-    }
-
-    if(m >= 6 && m <= 8){
-         if(m == 7 || m == 8){
-                cout << "Summer";
-                return 0;
+    }else if(m == 9 || m == 11){
+        if(d <= 30){
+            cout << "Fall";
         }else{
-            if(d <= 30){
-                cout << "Summer";
-                return 0;
-            }else{
-                cout << "-1";
-                return 0;
-            }
+            cout << "-1";
         }
-        return 0;
+    }else if(m == 10){
+        cout << "Fall";
+    }else if(m == 12 || m == 1){
+        cout << "Winter";
     }
-
-    if(m >= 9 && m <= 11){
-        if(m == 10){
-            cout << "Fall" << endl;
-            return 0;
-        }else{
-            if(d <= 30){
-                cout << "Fall";
-                return 0;
-            }else{
-                cout << "-1";
-            }
-        }
-        return 0;
-    }
-
-    if(m == 12 || m == 1){
-        cout << "Winter" << endl;
-    }
-
     return 0;
 }
