@@ -12,7 +12,9 @@ int getGcd(int a, int b){
 }
 
 int getLcm(int a, int b) {
-  return (a * b) / getGcd(a, b);
+    if(a % b == 0)
+        return a;
+    return (a * b) / getGcd(a, b);
 }
 
 int main() {
