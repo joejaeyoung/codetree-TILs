@@ -14,6 +14,6 @@ int main() {
     }
 
     sort(v.begin(), v.end() + 1);
-    cout << v[k - 1] << endl;
+    cout << v[k] << endl;
     return 0;
 }
