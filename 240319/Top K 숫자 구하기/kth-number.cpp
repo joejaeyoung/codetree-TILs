@@ -17,11 +17,11 @@ int main() {
         cout << v[0] << endl;
         return 0;
     }
-    
+
     sort(v.begin(), v.end() + 1);
-    for(int i = 0; i < n; i++){
+    /*for(int i = 0; i < n; i++){
         cout << i << " " << v[i] << endl;
-    }
+    }*/
     cout << v[k - 1] << endl;
     return 0;
 }
