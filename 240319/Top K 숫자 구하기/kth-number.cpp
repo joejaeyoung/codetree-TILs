@@ -18,7 +18,7 @@ int main() {
         return 0;
     }
 
-    sort(v.begin(), v.end() +1);
+    sort(v.begin(), v.end());
     /*for(int i = 0; i < n; i++){
         cout << i << " " << v[i] << endl;
     }*/
