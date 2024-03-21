@@ -18,7 +18,7 @@ int main() {
     int n, k;
     cin >> n >> k;
 
-    int arr[101];
+    int arr[102];
     memset(arr, -1, sizeof(arr) / 4);
 
     int a, b;
