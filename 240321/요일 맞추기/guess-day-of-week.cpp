@@ -12,7 +12,10 @@ int main() {
     int cnt = 0;
     for(int i = m1; i <= m2; i++){
         for(int j = d1; j <= month_days[i]; j++){
-            cnt++;
+            if(cnt == 6)
+                cnt = 0;
+            else
+                cnt++;
         }
     }
 
