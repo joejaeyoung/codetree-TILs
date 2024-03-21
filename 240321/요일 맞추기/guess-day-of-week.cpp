@@ -18,7 +18,10 @@ int main() {
     if(count_day < 0){
         count_day = count_day % 7;
         count_day += 8;
+        cout << days[count_day % 7];
+    }else{
+        cout << days[count_day % 7];
     }
-    cout << days[count_day % 7];
+
     return 0;
 }
