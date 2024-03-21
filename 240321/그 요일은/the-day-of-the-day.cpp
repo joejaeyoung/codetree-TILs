@@ -26,11 +26,12 @@ int main() {
             break;
     }
     int diff = NumOfDay(m2, d2) - NumOfDay(m1, d1);
+    //cout << diff << endl;
     int week = diff / 7;
     int day = diff % 7;
-    if (i < day)
-        cout << week + 1;
+    if (day <= i)
+        cout << week + 2;
     else
-        cout << week;
+        cout << week + 1;
     return 0;
 }
