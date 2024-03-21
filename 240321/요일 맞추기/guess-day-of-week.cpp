@@ -15,7 +15,7 @@ int main() {
     }
     count_day += d2 - d1;
 
-    if(count_day < 0){
+    if(count_day <= 0){
         count_day = count_day % 7;
         count_day += 7;
         cout << days[count_day % 7];
