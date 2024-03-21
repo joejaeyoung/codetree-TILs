@@ -16,6 +16,8 @@ int main() {
     int start, en;
     while(n--){
         cin >> start >> en;
+        start += OFFSET;
+        en += OFFSET;
         for(int i = start; i < en; i++)
             arr[i]++;
     }
