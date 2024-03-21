@@ -19,7 +19,7 @@ int main() {
     cin >> n >> k;
 
     int arr[102];
-    memset(arr, -1, sizeof(arr) * 102);
+    memset(arr, -1, sizeof(arr) * 101);
 
     int a, b;
     while(k--){
