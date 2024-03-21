@@ -20,7 +20,7 @@ int main() {
         count_day += 7;
         cout << days[count_day % 7];
     }else{
-        cout << days[count_day % 7 + 1];
+        cout << days[count_day % 7];
     }
 
     return 0;
