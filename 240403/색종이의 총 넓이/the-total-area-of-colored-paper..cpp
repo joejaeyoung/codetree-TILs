@@ -1,7 +1,7 @@
 #include <iostream>
 
 #define OFFSET 100
-#define MAX 200
+#define MAX 202
 
 using namespace std;
 
