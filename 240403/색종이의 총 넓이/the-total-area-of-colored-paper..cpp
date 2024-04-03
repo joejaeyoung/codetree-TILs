@@ -7,7 +7,7 @@ using namespace std;
 
 int paper[MAX + 1][MAX + 1];
 
-void draw(int x1, int y1, int x2, int y2){
+void draw(int y1, int x1, int y2, int x2){
     for(int i = x1; i <= x2; i++){
         for(int j = y1; j <= y2; j++){
             paper[j][i] = 1;
