@@ -13,7 +13,7 @@ int main() {
     int t;
     //A이동
     int a_idx = 1;
-    int total_time = 0;
+    unsigned long long total_time = 0;
     for(int i = 1; i <= n; i++) {
         cin >> d >> t;
         total_time += t;
