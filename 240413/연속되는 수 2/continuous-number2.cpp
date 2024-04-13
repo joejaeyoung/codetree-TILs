@@ -12,15 +12,14 @@ int main() {
     int count = 0;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        if (i == 0 || arr[i] == arr[i-1]) {
-            count++;
+        if (i == 0 || arr[i] != arr[i-1]) {
+            count = 0;
         }
         else {
-            max_num = max(max_num, count);
-            count = 0;
+            count++;
         }
         max_num = max(max_num, count);
     }
-    cout << max_num;
+    cout << max_num + 1;
     return 0;
 }
