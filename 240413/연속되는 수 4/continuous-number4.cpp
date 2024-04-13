@@ -15,13 +15,13 @@ int main() {
         cin >> arr[i];
 
         if(i == 0 || arr[i] <= arr[i - 1]) {
-            count = 0;
+            count = 1;
         } else {
             count++;
         }
         max_c = max(count, max_c);
     }
-    cout << max_c + 1;
+    cout << max_c;
 
     return 0;
 }
