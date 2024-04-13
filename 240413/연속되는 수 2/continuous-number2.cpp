@@ -8,7 +8,7 @@ int main() {
     int n;
     cin >> n;
 
-    int max_num = -1;
+    int max_num = 0;
     int count = 0;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
