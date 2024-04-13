@@ -46,7 +46,7 @@ int main() {
 
     int sec = 0;
     //겹치는 부분 찾기
-    for(int i = 1; i <= total_time; i++) {
+    for(int i = 1; i <= a_idx; i++) {
         //cout << a[i] << " " << b[i] << endl;
         if(a[i] == b[i]) {
             sec = i;
