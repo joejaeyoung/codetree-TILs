@@ -13,8 +13,10 @@ int main() {
     int t;
     //A이동
     int a_idx = 1;
+    int total_time = 0;
     for(int i = 1; i <= n; i++) {
         cin >> d >> t;
+        total_time += t;
         if (d == 'R')
             while(t--) {
                 a[a_idx] = a[a_idx - 1] + 1;
@@ -44,7 +46,7 @@ int main() {
 
     int sec = 0;
     //겹치는 부분 찾기
-    for(int i = 1; i < 1000; i++) {
+    for(int i = 1; i <= total_time; i++) {
         //cout << a[i] << " " << b[i] << endl;
         if(a[i] == b[i]) {
             sec = i;
