@@ -10,18 +10,18 @@ int main() {
     cin >> n;
 
     int count = 0;
-    int max_c = -1;
+    int max_c = 1;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
 
-        if(i == 0 || arr[i] < arr[i - 1]) {
+        if(i == 0 || arr[i] <= arr[i - 1]) {
             count = 0;
         } else {
             count++;
         }
         max_c = max(count, max_c);
     }
-    cout << max_c;
+    cout << max_c + 1;
 
     return 0;
 }
