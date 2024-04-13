@@ -51,6 +51,9 @@ int main() {
             break;
         }
     }
-    cout << sec;
+    if (sec == 0)
+        cout << -1;
+    else
+        cout << sec;
     return 0;
 }
