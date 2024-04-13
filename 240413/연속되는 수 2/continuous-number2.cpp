@@ -19,7 +19,8 @@ int main() {
             max_num = max(max_num, count);
             count = 0;
         }
+        max_num = max(max_num, count);
     }
-    cout << max_num + 1;
+    cout << max_num;
     return 0;
 }
