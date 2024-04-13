@@ -3,8 +3,8 @@
 
 using namespace std;
 
-int a[1001];
-int b[1001];
+int a[1000001];
+int b[1000001];
 int main() {
     int n, m;
     cin >> n >> m;
