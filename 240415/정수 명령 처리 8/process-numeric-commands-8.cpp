@@ -21,11 +21,13 @@ int main() {
             cin >> i;
             list.push_back(i);
         }else if (s == "pop_front") {
-            cout << list.front() << endl;
+            int v = list.front();
             list.pop_front();
+            cout << v << endl;
         }else if (s == "pop_back") {
-            cout << list.back() << endl;
+            int v = list.back();
             list.pop_back();
+            cout << v << endl;
         }else if (s == "size") {
             cout << list.size() << endl;
         }else if (s == "empty") {
