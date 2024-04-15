@@ -31,7 +31,7 @@ int main() {
         }else if (s == "size") {
             cout << list.size() << endl;
         }else if (s == "empty") {
-            if (s.empty()) {
+            if (list.empty()) {
                 cout << 1 << endl;
             }else {
                 cout << 0 << endl;
