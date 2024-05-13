@@ -13,8 +13,13 @@ int main() {
     for(int i = 0; s[i] != '\0'; i++) {
         if (s[i] == '(')
             st.push(s[i]);
-        if (s[i] == ')' && st.empty() == false)
-            st.pop();
+        if (s[i] == ')') {
+            if (st.empty() == true) {
+                cout << "No";
+                return 0;
+            }else
+                st.pop();
+        }
     }
     if (st.empty() == true)
         cout << "Yes";
