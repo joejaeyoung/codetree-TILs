@@ -13,7 +13,7 @@ int main() {
     for(int i = 0; s[i] != '\0'; i++) {
         if (s[i] == '(')
             st.push(s[i]);
-        if (s[i] == ')')
+        if (s[i] == ')' && st.empty() == false)
             st.pop();
     }
     if (st.empty() == true)
