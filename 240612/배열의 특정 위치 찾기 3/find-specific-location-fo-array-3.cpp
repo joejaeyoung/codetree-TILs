@@ -7,7 +7,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int tmp = 1;
     int total = 0;
-    while(tmp) {
+    while(tmp != 0) {
         cin >> tmp;
         total += tmp;
     }
