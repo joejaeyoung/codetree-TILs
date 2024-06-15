@@ -17,8 +17,8 @@ int main() {
 
     //완탐 x축 기준 가로
     for(int i = 0; i < n; i++) {
+        int sequence = 0;
         for(int j = 0; j < n; j = j) {
-            int sequence = 0;
             int num = arr[i][j];
 
             while(j < n && num == arr[i][j]) {
@@ -27,26 +27,26 @@ int main() {
                 //cout << i << " " << j << endl;
             }
 
+        }
+
             if(sequence >= m)
                 count++;
-        }
     }
     //cout << count << " ";
 
     //완탐 y축 기준 세로
     for(int j = 0; j < n; j++) {
+        int sequence = 0;
         for(int i = 0; i < n; i = i) {
-            int sequence = 0;
             int num = arr[j][i];
 
             while(i < n && num == arr[j][i]) {
                 i++;
                 sequence++;
             }
-
-            if(sequence >= m)
-                count++;
         }
+        if(sequence >= m)
+            count++;
     }
     cout << count;
     return 0;
