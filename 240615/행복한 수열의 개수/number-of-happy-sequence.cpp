@@ -19,18 +19,18 @@ int main() {
     for(int i = 0; i < n; i++) {
         int sequence = 0;
         for(int j = 0; j < n; j = j) {
+            int tmp = 0;
             int num = arr[i][j];
 
             while(j < n && num == arr[i][j]) {
                 j++;
-                sequence++;
+                tmp++;
                 //cout << i << " " << j << endl;
             }
-
+            sequence = max(sequence, tmp);
         }
-
-            if(sequence >= m)
-                count++;
+        if(sequence >= m)
+            count++;
     }
     //cout << count << " ";
 
@@ -38,12 +38,14 @@ int main() {
     for(int j = 0; j < n; j++) {
         int sequence = 0;
         for(int i = 0; i < n; i = i) {
+            int tmp = 0;
             int num = arr[j][i];
 
             while(i < n && num == arr[j][i]) {
                 i++;
-                sequence++;
+                tmp++;
             }
+            sequence = max(sequence, tmp);
         }
         if(sequence >= m)
             count++;
