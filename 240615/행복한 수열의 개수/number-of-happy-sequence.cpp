@@ -39,16 +39,19 @@ int main() {
         int sequence = 0;
         for(int i = 0; i < n; i = i) {
             int tmp = 0;
-            int num = arr[j][i];
+            int num = arr[i][j];
 
-            while(i < n && num == arr[j][i]) {
+            while(i < n && num == arr[i][j]) {
                 i++;
                 tmp++;
             }
             sequence = max(sequence, tmp);
+            //cout << "세로 점검" << sequence << endl;
         }
-        if(sequence >= m)
+        if(sequence >= m) {
             count++;
+            //cout << "세로" << sequence << endl;
+        }
     }
     cout << count;
     return 0;
