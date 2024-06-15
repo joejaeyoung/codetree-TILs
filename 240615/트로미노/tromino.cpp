@@ -7,7 +7,7 @@ using namespace std;
 int arr[201][201];
 int max_num = -1;
 
-int find_min_four(int x, int y) {
+int find_min_four(int y, int x) {
     int tmp[4];
     tmp[0] = arr[y][x];
     tmp[1] = arr[y][x + 1];
