@@ -61,7 +61,7 @@ int main() {
     for(int i = 0; i < n ; i++) {
         for(int j = 0; j < n; j++) {
             //채굴 범위
-            for(int num = 0; num < n; num++) {
+            for(int num = 0; num <= n; num++) {
                 //금 개수랑 cost 비용 비교
                 //cout << "기준 : " << i << " " << j << " " << num << endl << getGoldNum(i, j, num) << endl;
                 if(goldprice * getGoldNum(i, j, num) >= cost(num))
