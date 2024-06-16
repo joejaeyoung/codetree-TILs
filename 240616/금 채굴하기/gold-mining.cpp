@@ -17,34 +17,28 @@ int getGoldNum(int x, int y, int num) {
     int gap = 0;
 
         gap = num;
-        //cout << "gap : " << i << endl;
-        for(int k = y - num; k <= y + num; k++) {
-            if ( k <= y) {
-                for(int l = x - num + gap; l <= x + num - gap; l++) {
-                    //cout << "1y :  " << k << "x : " << l << endl;
-                    if(k >= 0 && k < n && l >= 0 && l < n) {
-                        total_place += 1;
-                        goldnum += arr[k][l];
-                    }
-                }
-                gap--;
-
-            }
-            else {
-                gap++;
-                for(int l = x - num + gap; l <= x + num - gap; l++) {
-                   //cout << "2y :  " << k << "x : " << l << endl;
-                   if(k >= 0 && k < n && l >= 0 && l < n) {
-                    goldnum += arr[k][l]; 
+    for(int k = y - num; k <= y + num; k++) {
+        if ( k <= y) {
+            for(int l = x - num + gap; l <= x + num - gap; l++) {
+                if(k >= 0 && k < n && l >= 0 && l < n) {
                     total_place += 1;
-                   }
+                    goldnum += arr[k][l];
                 }
-                //gap++;
             }
-            if (gap < 0)
-                gap = 0;
+            gap--;
         }
-        //cout << endl << endl;
+        else {
+            gap++;
+            for(int l = x - num + gap; l <= x + num - gap; l++) {
+               if(k >= 0 && k < n && l >= 0 && l < n) {
+                goldnum += arr[k][l]; 
+                total_place += 1;
+               }
+            }
+        }
+        if (gap < 0)
+            gap = 0;
+    }
     return goldnum;
 }
 
@@ -62,46 +56,12 @@ int main() {
         for(int j = 0; j < n; j++) {
             //채굴 범위
             for(int num = 0; num <= n; num++) {
-                //금 개수랑 cost 비용 비교
-                //cout << "기준 : " << i << " " << j << " " << num << endl << getGoldNum(i, j, num) << endl;
                 if(goldprice * getGoldNum(i, j, num) >= cost(num))
                     maxgoldnum = max(maxgoldnum, getGoldNum(i, j, num));
                 total_place = 0;
             }
         }
     }
-
     cout << maxgoldnum;
     return 0;
 }
-
-// #include <iostream>
-
-// using namespace std;
-// int main(void) {
-//     int gap = 0;
-//     int x = 3, y = 3;
-//     for(int i = 0; i < 3; i++) {
-//         gap = i;
-//         cout << "gap : " << i << endl;
-//         for(int k = y - i; k <= y + i; k++) {
-//             if ( k <= y) {
-//                 for(int l = x - i + gap; l <= x + i - gap; l++) {
-//                     cout << "1y :  " << k << "x : " << l << endl;
-//                 }
-//                 gap--;
-
-//             }
-//             else {
-//                 gap++;
-//                 for(int l = x - i + gap; l <= x + i - gap; l++) {
-//                    cout << "2y :  " << k << "x : " << l << endl; 
-//                 }
-//                 //gap++;
-//             }
-//             if (gap < 0)
-//                 gap = 0;
-//         }
-//         cout << endl << endl;
-//     }
-// }
