@@ -30,14 +30,13 @@ int main() {
     //시작 좌표
     for(int y = 0; y < height; y++) {
         for(int x = 0; x < width; x++) {
-
+            if (arr[y][x] < 0)
+                continue;
             //가로 세로 정하기
-            for(int h = 1; h <= height; h++) {
-                for(int w = 1; w <= width; w++) {
+            for(int h = 1; y + h <= height; h++) {
+                for(int w = 1; x + w <= width; w++) {
                     if(is_valid(y, x, h, w))
                         space = max(space, h * w);
-                    else
-                        continue;
                 }
             }
         }
