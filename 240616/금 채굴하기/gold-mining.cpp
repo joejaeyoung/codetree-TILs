@@ -6,6 +6,7 @@ int arr[21][21];
 int goldprice;
 int n;
 int maxgoldnum = 0;
+int total_place = 0;
 
 int cost(int num) {
     return (num * num) + (num + 1) * (num + 1);
@@ -21,8 +22,10 @@ int getGoldNum(int x, int y, int num) {
             if ( k <= y) {
                 for(int l = x - num + gap; l <= x + num - gap; l++) {
                     //cout << "1y :  " << k << "x : " << l << endl;
-                    if(k >= 0 && k < n && l >= 0 && l < n)
+                    if(k >= 0 && k < n && l >= 0 && l < n) {
+                        total_place += 1;
                         goldnum += arr[k][l];
+                    }
                 }
                 gap--;
 
@@ -31,8 +34,10 @@ int getGoldNum(int x, int y, int num) {
                 gap++;
                 for(int l = x - num + gap; l <= x + num - gap; l++) {
                    //cout << "2y :  " << k << "x : " << l << endl;
-                   if(k >= 0 && k < n && l >= 0 && l < n)
-                   goldnum += arr[k][l]; 
+                   if(k >= 0 && k < n && l >= 0 && l < n) {
+                    goldnum += arr[k][l]; 
+                    total_place += 1;
+                   }
                 }
                 //gap++;
             }
@@ -56,11 +61,12 @@ int main() {
     for(int i = 0; i < n ; i++) {
         for(int j = 0; j < n; j++) {
             //채굴 범위
-            for(int num = 0; num < n / 2 + 1; num++) {
+            for(int num = 0; num < n; num++) {
                 //금 개수랑 cost 비용 비교
                 //cout << "기준 : " << i << " " << j << " " << num << endl << getGoldNum(i, j, num) << endl;
                 if(goldprice * getGoldNum(i, j, num) >= cost(num))
                     maxgoldnum = max(maxgoldnum, getGoldNum(i, j, num));
+                total_place = 0;
             }
         }
     }
