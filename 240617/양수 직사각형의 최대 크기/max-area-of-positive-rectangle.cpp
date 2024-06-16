@@ -10,7 +10,7 @@ int arr[21][21];
 int is_valid(int y, int x, int height, int width) {
     for(int i = 0; i < height; i++) {
         for(int j = 0; j < width; j++) {
-            if (arr[i + y][j + x] < 0)
+            if (arr[i + y][j + x] <= 0)
                 return 0;
         }
 
@@ -31,7 +31,7 @@ int main() {
     //시작 좌표
     for(int y = 0; y < height; y++) {
         for(int x = 0; x < width; x++) {
-            if (arr[y][x] < 0)
+            if (arr[y][x] <= 0)
                 continue;
             //가로 세로 정하기
             for(int h = 1; y + h <= height; h++) {
