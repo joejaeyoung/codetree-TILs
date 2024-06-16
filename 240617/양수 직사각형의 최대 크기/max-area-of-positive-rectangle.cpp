@@ -27,6 +27,7 @@ int main() {
     }
 
     int space = -1;
+    int flag = 1;
     //시작 좌표
     for(int y = 0; y < height; y++) {
         for(int x = 0; x < width; x++) {
@@ -35,12 +36,17 @@ int main() {
             //가로 세로 정하기
             for(int h = 1; y + h <= height; h++) {
                 for(int w = 1; x + w <= width; w++) {
-                    if(is_valid(y, x, h, w))
+                    if(is_valid(y, x, h, w)) {
                         space = max(space, h * w);
+                        flag = 0;
+                    }
                 }
             }
         }
     }
-    cout << space << endl;
+    if(flag)
+        cout << -1;
+    else
+        cout << space << endl;
     return 0;
 }
