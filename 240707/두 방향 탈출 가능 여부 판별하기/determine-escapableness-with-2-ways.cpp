@@ -31,6 +31,7 @@ bool CanGo(int y, int x) {
         return false;
     return true;
 }
+
 void DFS(int Y, int X) {
     visited[Y][X] = 1;
 
