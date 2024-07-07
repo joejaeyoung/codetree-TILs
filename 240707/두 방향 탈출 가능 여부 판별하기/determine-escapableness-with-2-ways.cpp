@@ -18,6 +18,8 @@ bool inRange(int y, int x) {
         return false;
     if (y < 0 || y >= height)
         return false;
+    if (visited[y][x])
+        return false;
     return true;
 }
 
