@@ -73,7 +73,7 @@ int main() {
     
     while(point_num--) {
         int x, y;
-        cin >> x >> y;
+        cin >> y >> x;
         if (CanGo(y - 1, x - 1)) {
             push(y - 1, x - 1);
             BFS();
