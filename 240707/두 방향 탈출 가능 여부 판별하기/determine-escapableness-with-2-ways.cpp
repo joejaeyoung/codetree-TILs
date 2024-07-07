@@ -7,7 +7,6 @@ using namespace std;
 
 int arr[MAX][MAX];
 bool visited[MAX][MAX];
-int result[MAX][MAX];
 int dx[2] = {1, 0};
 int dy[2] = {0, 1};
 bool finish;
@@ -34,6 +33,8 @@ bool CanGo(int y, int x) {
 
 void DFS(int Y, int X) {
     visited[Y][X] = 1;
+    if (visited[height - 1][width - 1])
+        return ;
 
     for(int i = 0; i < 2; i++) {
         int new_x = X + dx[i];
