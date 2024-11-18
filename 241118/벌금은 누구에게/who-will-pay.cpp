@@ -26,5 +26,5 @@ int main(void) {
         cout << result << "\n";
     else
         cout << -1 << "\n";
-    return (1);
+    return (0);
 }
