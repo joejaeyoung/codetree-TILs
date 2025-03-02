@@ -20,7 +20,9 @@ int main() {
         if (dir[i] == 'L') {
             for(int j = 0; j <= x[i] - 1; j++)
                 line[locate--]++;
-        } else {
+        } 
+        
+        if (dir[i] == 'R') {
             for(int j = 0; j <= x[i] - 1; j++) {
                 line[locate]++;
                 //cout << locate - OFFSET << " ";
