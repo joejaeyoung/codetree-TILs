@@ -44,7 +44,7 @@ int main() {
     }
 
     int result = days / 7;
-    if (days % 7 <= a)
+    if (days % 7 >= a)
         result += 1;
     cout << result;
 
