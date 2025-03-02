@@ -19,7 +19,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         if (dir[i] == 'L') {
             for(int j = 0; j <= x[i] - 1; j++)
-                line[locate--]++;
+                line[--locate]++;
         } 
         
         if (dir[i] == 'R') {
@@ -34,11 +34,11 @@ int main() {
     for(int i = 0; i < 3000; i++) {
         if (line[i] >= 2) {
             result++;
-            //cout << i - OFFSET << " ";
+           // cout << i - OFFSET << " ";
         }
     }
 
-    //cout << "\n";
+   // cout << "\n";
     cout << result;
 
     // Please write your code here.
