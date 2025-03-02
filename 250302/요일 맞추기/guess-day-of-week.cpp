@@ -52,7 +52,7 @@ int main() {
 
             if (d1 == 0) {
                 m1--;
-                d1 = monthDays[m2 - 1];
+                d1 = monthDays[m1 - 1];
             }
         }
     }
