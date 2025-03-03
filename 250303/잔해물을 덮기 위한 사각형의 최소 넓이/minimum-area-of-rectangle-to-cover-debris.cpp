@@ -44,7 +44,10 @@ int main() {
 
     // cout << x_min << " " << x_max << endl;
     // cout << y_min << " " << y_max << endl;
-    cout << (y_max - y_min + 1) * (x_max - x_min + 1);
+    if (x_min == OFFSET * 2 +1 || x_max == -1)
+        cout << 0;
+    else
+        cout << (y_max - y_min + 1) * (x_max - x_min + 1);
 
 
     return 0;
