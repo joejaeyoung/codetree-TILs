@@ -21,6 +21,9 @@ int main() {
         } else {
             cnt++;
         }
+
+        if (i == N - 1)
+            cntMax = max(cntMax, cnt);
     }
 
     // Please write your code here.
